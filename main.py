@@ -9,13 +9,15 @@ from Board import *
 def game(init):
     i = init
     if i == 0:
-        board = Board(10, 10)
-        board.newGame()
+        gameBoard = Board(50, 50)
+        gameBoard.newGame()
+        gameBoard.seed()
         i= 1
     while(True):
-        board.display()
+        gameBoard.display()
+        gameBoard.seed()
         #board.update()
         print('generation: ' + str(i))
         i += 1
-        sleep(1)
+        sleep(2)
         system('cls')

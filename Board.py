@@ -1,4 +1,6 @@
-from EmptyArray import arrayGenerator
+from EmptyArray import arrayGenerator, seedBoard
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
 
 class Board:
     def __init__(self, width, height):
@@ -7,9 +9,13 @@ class Board:
         self.board = []
 
     def newGame(self):
-        self.board = arrayGenerator(self.x, self.y)
+        self.board = arrayGenerator(self)
+        
+    def seed(self):
+        self.board = seedBoard(self)
+        
         
     def display(self):
         for row in self.board:
-            print(row)
-            #for val in row:
+            print(''.join(row))
+            #for val in row
