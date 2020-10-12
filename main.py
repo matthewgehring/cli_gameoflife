@@ -15,8 +15,7 @@ def game(init):
         i= 1
     while(True):
         gameBoard.display()
-        gameBoard.seed()
-        #board.update()
+        gameBoard.update()
         print('generation: ' + str(i))
         i += 1
         sleep(2)
